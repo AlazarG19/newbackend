@@ -17,12 +17,13 @@ app.post('/stickers', (req, res) => {
     })
 })
 app.get('/stickers', (req, res) => {
-    fs.readFile('database.txt', "utf-8", (err, data) => {
-        const product = JSON.parse(data.toString());
-        console.log("called")
-        res.json(product)
+    // fs.readFile('database.txt', "utf-8", (err, data) => {
+    //     const product = JSON.parse(data.toString());
+    //     console.log("called")
+    //     res.json(product)
 
-    })
+    // })
+    res.json({success:false})
 })
 app.get('/orders', (req, res) => {
     console.log('order get')
