@@ -6,6 +6,9 @@ var fs = require('fs')
 
 app.use(cors())
 app.use(express.json())
+app.get('/stickers', (req, res) => {
+    res.json({success:true})
+})
 
 app.post('/stickers', (req, res) => {
 
